@@ -1,0 +1,14 @@
+<div class="formWrapper">
+    <form  [ngClass]="formToggleClass()" (submit)="submitHandler($event)" autocomplete="off">  
+        <app-autocomplete-input 
+            [countryList]="countryList"
+            (inputValid)="inputValid($event)" >
+        </app-autocomplete-input>
+        <app-parameter-radios (radioChanged)="radioChanged($event)"></app-parameter-radios>    
+        <div class="centered">
+            <input type="submit"  [disabled]="disabled()"value="Search" />
+        </div>  
+    </form>
+    <div (click)="toggle()"  class="handler">Toggle visibility</div>
+</div> 
+

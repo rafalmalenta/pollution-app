@@ -1,0 +1,7 @@
+<div class="centered" [ngClass]="inputClass()">
+<label for="country">Pick Country </label>     
+<input type="text"   name="Country" [(ngModel)]="inputValue" (blur)="clear()" (input)="filterCountries($event)" />    
+<div id="AutocompleteList">
+    <div (click)="pickCountry($event)" class="autocomplete" *ngFor="let country of countriesToDisplay">{{country}}</div>
+</div>
+</div>

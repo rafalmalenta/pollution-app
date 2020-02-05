@@ -1,0 +1,3 @@
+<app-loader *ngIf="loading==true"></app-loader>
+<app-consent-box (acceptConsent)="setConsent()" *ngIf="loading==false&&consent==false"></app-consent-box>
+<app-layout *ngIf="loading==false&&consent==true"></app-layout>
